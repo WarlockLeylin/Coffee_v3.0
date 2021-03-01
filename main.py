@@ -35,7 +35,7 @@ class MyWidget(QMainWindow):
 
     def add_coffee(self):
         cur = self.con.cursor()
-        result = cur.execute(f"""INSERT INTO coffees(name, stepobjar, type, taste, price, volume)
+        res = cur.execute(f"""INSERT INTO coffees(name, stepobjar, type, taste, price, volume)
                 VALUES({self.table.lineEdit.text()}, {self.table.comboBox.currentText()},
                 {self.radio}, {self.table.lineEdit_2.text()}, {self.spinBox.value()},
                 {self.lineEdit_3.text()})""")
